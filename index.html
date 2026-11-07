@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenFilings India</title>
+<meta name="description" content="A planned free, non-commercial archive of disclosures by Indian listed companies. Research stage; nothing published yet.">
+<style>
+  :root {
+    --bg: #fbfaf7; --fg: #1f2328; --muted: #57606a; --line: #d8dee4;
+    --accent: #1a5fb4; --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #14171b; --fg: #e6e8eb; --muted: #9aa4af; --line: #2d333b;
+            --accent: #6cb6ff; --card: #1b1f24; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
+  h2 { font-size: 1.2rem; margin: 40px 0 8px; }
+  p, li { color: var(--fg); }
+  .lede { color: var(--muted); font-size: 1.1rem; margin: 0 0 24px; }
+  .status { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent);
+            border-radius: 6px; padding: 12px 16px; }
+  code { font: 0.9em ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+         background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 1px 5px;
+         overflow-wrap: anywhere; }
+  a { color: var(--accent); }
+  ul { padding-left: 1.2em; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
+           color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>OpenFilings India</h1>
+  <p class="lede">A planned free, non-commercial archive of the disclosures that Indian listed companies file with the stock exchanges, starting with quarterly financial results.</p>
+
+  <div class="status">
+    <strong>Status (November 2026): research stage.</strong> No data is published, and no automated collection is running. Public access will only start with the exchanges' written permission or legal advice.
+  </div>
+
+  <h2>What it is for</h2>
+  <ul>
+    <li>Turning companies' XBRL results filings into consistent, comparable financial statements.</li>
+    <li>Keeping a full version history, so it is clear when a company revised a number it had already published.</li>
+    <li>Linking every number back to the official filing it came from.</li>
+    <li>Serving students, researchers, journalists, small investors and independent developers.</li>
+  </ul>
+
+  <h2>What it will not do</h2>
+  <ul>
+    <li>No price or market data.</li>
+    <li>No private companies.</li>
+    <li>No investment advice, ratings or signals.</li>
+    <li>No advertising and no paid tiers.</li>
+    <li>No re-hosting of exchange documents without permission.</li>
+  </ul>
+
+  <h2>For website operators: our bot</h2>
+  <p>If you see requests from this project, they identify themselves with this User-Agent:</p>
+  <p><code>OpenFilingsIndia/&lt;version&gt; (+https://pratikgpt.github.io/openfilings-india-site/; &lt;project email&gt;)</code></p>
+  <p>The software enforces these rules in code:</p>
+  <ul>
+    <li>Only sources whose terms allow it, or whose owners have given permission, are contacted.</li>
+    <li>At most one request every 5 seconds per host, over one connection.</li>
+    <li>File downloads only between 01:00 and 06:00 IST. Feeds are read at most every 15 minutes.</li>
+    <li>robots.txt is checked before every run, and conditional requests avoid downloading unchanged files.</li>
+    <li>It backs off after an error or a "slow down" response, and stops completely after a few in a row.</li>
+    <li>It never disguises itself as a browser, reuses cookies, rotates IP addresses or uses proxies.</li>
+  </ul>
+  <p>If you want it to slow down or stop, tell us (below) and it will be done, no questions asked.</p>
+
+  <h2>Contact</h2>
+  <p>Open an issue on <a href="https://github.com/pratikgpt/openfilings-india-site/issues">this page's GitHub repository</a>. A dedicated project email address will be listed here soon.</p>
+  <p>Maintainer: Pratik Gupta, an independent developer in India.</p>
+
+  <footer>
+    "OpenFilings India" is a working name. This page describes a plan; it is not investment advice, and it is not affiliated with any exchange or regulator.
+  </footer>
+</main>
+</body>
+</html>
